@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+
+        body{
+            width: 80vw;
+            margin: auto;
+            height: 50vh;
+            border: 2px solid black;
+            margin-top: 10px;
+            text-align: center;
+        }
+        form{
+            margin: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            width: inherit;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Update Profile of <%=userdata[0]['name']%></h2>
+   
+        <div>
+      
+          <form action="/user/<%=userdata[0]['id']%>?_method=PATCH" method="post"><br>
+            &nbsp;&nbsp;
+  <input type="text" placeholder="<%=userdata[0]['name']%>"  name="name"><br>
+  &nbsp;&nbsp;
+  <input type="text" placeholder="Password" name="password"><br> <br>
+
+
+       <button>Submit</button>
+          </form>
+      
+    
+        </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Profile</title>
+    <style>
+
+        body{
+            width: 80vw;
+            margin: auto;
+            height: 50vh;
+            border: 2px solid black;
+            margin-top: 10px;
+            text-align: center;
+        }
+        form{
+            margin: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            width: inherit;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Join Us!</h2>
+    <form action="/add" method="post">
+     
+        <input type="text" placeholder="User Name" name="name"> <br><br>
+
+        <input type="email" placeholder="Email" name="email"><br><br>
+        <input type="password" placeholder="password" name="password"><br><br>
+      <button>Submit</button>
+
+    </form>
+</body>
+</html>

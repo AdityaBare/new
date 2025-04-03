@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles</title>
+    <style>
+        table,th,td{
+            border: 2px solid black;
+        }
+        td{
+            height: 25px;
+        }
+        body{
+            width: 90vw;
+            margin: auto;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+        h2{
+            color:rgb(171, 101, 15);
+            text-align: center;
+        }
+        div{
+            height:100px;
+            border: 2px solid gray;
+            margin: 20px;
+            padding-left: 20px;
+            border-radius: 2rem;
+        }
+        div:hover{
+            /* scale: 1.002; */
+            border-color: gold;
+        }
+        button{
+            position: absolute;
+            right: 8rem ;
+            font-weight: 700;
+            border-radius: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<h2>PROFILES</h2>
+
+<hr>
+
+
+
+<%for(let i of result){ %>
+  <div>
+
+    <p>ID:<%=i['id']%></p>
+
+      <span>Name:<%=i['name']%></span>
+      &nbsp;&nbsp;
+      <span>Email:<%=i['email']%></span>
+      <a href="http://localhost:8080/edit/<%=i['id']%>"><button>Edit</button></a>
+  </div>
+
+<%}%>
+
+    
+</body>
+</html>
